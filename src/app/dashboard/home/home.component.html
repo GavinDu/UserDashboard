@@ -1,0 +1,80 @@
+<div class="animate">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header card-info card-inverse">
+        </div>
+        <div class="card-block">
+          <carousel interval="5000">
+            <slide active="slide.active">
+              <div class="header-img" style="background-image: url('assets/images/hero-1.jpg');">
+                <div class="container">
+                  <h1>Right-Sized</h1>
+                  <h1> Business Loans to Grow</h1>
+                  <p>Pre-qualify for up to $250,000 in small business funding quicker than driving to the bank.</p>
+                </div>
+              </div>
+            </slide>
+            <slide>
+              <div class="header-img" style="background-image: url('assets/images/hero-2.jpg');">
+                <div class="container">
+                  <h1>Advantages</h1>
+                  <p></p>
+                </div>
+              </div>
+            </slide>
+            <slide>
+              <div class="header-img" style="background-image: url('assets/images/hero-3.jpg');">
+                <div class="container">
+                  <h1>Business Loans</h1>
+                  <p>Not every business is the same. So, not every financing solution should be the same. Credibly customizes
+                    each funding solution to your needs. Our wide range of products ensures that you’ll get the right-sized
+                    funding at each stage of your business’s development.</p>
+                </div>
+              </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-default">
+          <h5 class="card-title">Applied Documents</h5>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div *ngFor="let file of files" class="col-md-2 text-xs-left">
+              <a href="#" (click)="showChildModal(file.filename.split('.')[0], $event)">
+                <img class="img-fluid" src="http://localhost:7000/docs/{{file.filename.split('.')[0]}}.png" width="100%" height="170px" alt="Image">
+                <div class="card card-default card-block">
+                  <blockquote class="card-blockquote">
+                    <h5 class="text-default">{{file.filename}}</h5>
+                  </blockquote>
+                </div>
+              </a>
+            </div>
+            <!--The End of File Block-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Large modal-->
+  <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe  width="100%" height="800" [src]="filename | safeUrl" type="application/pdf"></iframe >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

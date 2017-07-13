@@ -1,0 +1,252 @@
+<div class="animate">
+    <div class="card">
+      <div class="card-header card-primary card-inverse">
+        <span class="card-title"></span>
+      </div>
+      <div id="cy-main-content" class="card-block">
+        <!-- Main container in here -->
+        <div class="row">
+          <div class="col-md-4">
+            <div>
+              <a href="javascript:void(0)">
+                <img src="https://i.imgur.com/bXEubIC.png" />
+              </a>
+            </div>
+            <ul class="signup-bullets">
+              <li>Loan sizes up to $250,000</li>
+              <li>Funding in as little as 48 hours — much faster than traditional bank loans</li>
+              <li>Over 90% pre-qualify</li>
+              <li>Hundreds of millions funded to thousands of businesses</li>
+            </ul>
+            <a href="https://www.bbb.org/detroit/business-reviews/financial-services/credibly-in-troy-mi-90013739" target="_blank">
+              <img src="https://app.credibly.com/e79ce0384083d7477e566083992efcdc.png" alt="A+ Better Business Bureau Rating">
+            </a>
+            <ul id="cy-left-column" class="nav flex-column">
+              <li>A+ Better Business Bureau Rating</li>
+              <li>The Credibly Account Online is secured by a 128-bit SSL connection, ensuring that your personal and financial
+                information will be protected at all times.</li>
+              <li>Questions? One of our Business Consultants is available at (888) 859-2459 to provide guidance, tips, and answers.
+                Please call us Monday through Thursday from 9am-6pm Eastern, and Friday from 9am-5pm Eastern. Stay inspired:
+                Visit InCredibly for small business education and advice, served daily on our blog.</li>
+            </ul>
+          </div>
+          <div class="col-md-8 right-column-container">
+            <!--right column-->
+            <div class="start-application">
+              <div class="signup-container">
+                <form id="signup-form">
+                  <header class="application-section-header">
+                    <h1 class="application-section-header-title">
+                      <div class="signup-title">
+                        <span class="gray-400">Start Your Loan Application</span>
+                        <span class="signup-title-login gray-600">
+                          
+                        </span>
+                      </div>
+                    </h1>
+                  </header>
+                  <!--Header End-->
+                  <!--First FieldSet -->
+                  <fieldset>
+                    <h1 class="h5 group-size-16">Business Info</h1>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">BUSINESS NAME</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.businessName"  [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 no-padding-right">
+                        <div dropdown class="input-group group-width-100-percent">
+                            <span  class="input-group-btn">
+                              <button class="btn btn-secondary group-size-12 group-85" type="button">INDUSTRY</button>
+                            </span>
+                          <ng-select  [items]="industries"
+                                      (selected)="industrySelected($event)"
+                                      placeholder="Select your industry..."
+                                      class="btn group-width-100-percent group-size-12 group-85 select-group">
+                          </ng-select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 no-padding-left">
+                        <div dropdown class="input-group  group-width-100-percent">
+                          <span class="input-group-btn">
+                              <button class="btn btn-secondary group-size-12 group-85" type="button">TIME IN BUSINESS</button>
+                            </span>
+                          <ng-select  [items]="times"
+                                      (selected)="timeInBusinessSelected($event)"
+                                      placeholder="Select a time..."
+                                      class="btn group-width-100-percent group-size-12 group-85 select-group">
+                          </ng-select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 no-padding-right">
+                        <div class="input-group group-width-100-percent">
+                            <span class="input-group-btn">
+                              <button class="btn btn-secondary group-size-12 group-85" type="button">AVG. MONTHLY DEPOSITS</button>
+                            </span>
+                            <ng-select  [items]="monthlyDeposits"
+                                        (selected)="avgMonthlyDepositsSelected($event)"
+                                        placeholder="Select a range..."
+                                        class="btn group-width-100-percent group-size-12 group-85 select-group">
+                            </ng-select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 no-padding-left">
+                        <div class="input-group group-width-100-percent">
+                          <span class="input-group-btn">
+                              <button class="btn btn-secondary group-size-12 group-85" type="button">AVG. MONTHLY CREDIT CARD VOLUME</button>
+                            </span>
+                            <ng-select  [items]="creditCardVolumes"
+                                        (selected)="avgMonthlyCreditCardVolumeSelected($event)"
+                                        placeholder="Select a range..."
+                                        class="btn group-width-100-percent group-size-12 group-85 select-group">
+                            </ng-select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group group-85">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">HOW MUCH WOULD YOU LIKE TO BORROW?</button>
+                          </span>
+                          <ng-select  [items]="amountsToBorrow"
+                                      (selected)="amountToBorrowSelected($event)"
+                                      placeholder="Select an amount..."
+                                      class="btn group-width-100-percent group-size-12 group-85 select-group">
+                          </ng-select>
+                        </div>
+                      </div>
+
+                    </div>
+                  </fieldset>
+                  <!-- First FieldSet End -->
+                  <!--First FieldSet -->
+                  <fieldset>
+                    <h1 class="h5 group-size-16">Business Address</h1>
+                    <div class="row">
+                     <div class="col-lg-8 no-padding-right">
+                        <div class="input-group group-85 group-width-100-percent">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">STREET ADDRESS</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.street"  [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 no-padding-left">
+                        <div class="input-group group-85 group-width-100-percent">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">ZIP</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.zip"  [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                     <div class="col-lg-6 no-padding-right">
+                        <div class="input-group group-85 group-width-100-percent">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">CITY</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.city" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 no-padding-left">
+                        <div class="input-group group-85 group-width-100-percent">
+                            <span class="input-group-btn">
+                              <button class="btn btn-secondary group-size-12 group-85" type="button">STATE</button>
+                            </span>
+                            <ng-select  [items]="states"
+                                        (selected)="stateSelected($event)"
+                                        placeholder="Select a state..."
+                                        class="btn group-width-100-percent group-size-12 group-85 select-group">
+                            </ng-select>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <!-- First FieldSet End -->
+                  <!--First FieldSet -->
+                  <fieldset>
+                    <h1 class="h5 group-size-16">Personal Info</h1>
+                    <div class="row">
+                     <div class="col-lg-6 no-padding-right">
+                        <div class="input-group group-85 group-width-100-percent">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">FIRST NAME</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.firstName" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 no-padding-left">
+                        <div class="input-group group-85 group-width-100-percent">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">LAST NAME</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.lastName" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                     <div class="col-lg-6 no-padding-right">
+                        <div class="input-group group-85 group-width-100-percent">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary group-size-12 group-85" type="button">PHONE</button>
+                          </span>
+                          <input type="text" class="form-control group-85" placeholder="" [(ngModel)]="selectedData.phone" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 no-padding-left">
+                        <div class="input-group group-85 group-width-100-percent">
+                            <span class="input-group-btn">
+                              <button class="btn btn-secondary group-size-12 group-85" type="button">FICO SCORE</button>
+                            </span>
+                            <ng-select  [items]="ficoScores"
+                                        (selected)="ficoScoreSelected($event)"
+                                        placeholder="Select a range..."
+                                        class="btn group-width-100-percent group-size-12 group-85 select-group">
+                            </ng-select>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <!-- First FieldSet End -->
+                </form>
+              </div>
+              <h3 class="h6 l-m-bottom-10">Authorization to Contact You By Phone:</h3>
+              <p class="p t-small l-m-bottom-10">
+                You authorize us, and our
+                affiliates, agents, and independent contractors, to contact you at
+                any telephone number you provide to us or from which you place a call
+                to us, or any telephone number where we believe we may reach you,
+                using any means of communication, including, but not limited to, calls
+                or text messages to mobile, cellular, wireless or similar devices and calls
+                or text messages using an automated telephone dialing system and/or artificial
+                voices or prerecorded messages, even if you incur charges for
+                receiving such communications.
+              </p>
+              <h3 class="h6 l-m-bottom-10">Authorization to Contact You By Other Means:</h3>
+              <p class="p t-small">
+                You also agree that we
+                and our affiliates, agents  and independent contractors may use any other medium,
+                as permitted by law and including, but not limited to, mail, e-mail
+                and facsimile, to contact you.
+              </p>
+              <div class="bottom-cotent">
+                <button type="button" class="btn btn-warning" (click)="onSubmit()">Submit your Application</button>
+              </div>
+            </div>
+            <!--right column end-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

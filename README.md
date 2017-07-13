@@ -1,3 +1,8 @@
+# Overview
+The is a loan dashboard, the loan documents can be display and management in here. Two authorizations included in are *admin* and *general user*.
+People in the *admin* group can login into management pages, and in there,
+they can add/delete/edit users' profiles and grant the permissions. On the other hand, in the user pages, people can fill out the application and submit it to backend and automatically generate a ***PDF document*** for it.
+
 # Admin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
@@ -26,3 +31,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+

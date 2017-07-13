@@ -1,0 +1,268 @@
+#cy-main-content {
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  padding: 1.875rem;
+  border-right: 1px solid #d1d3dd;
+  border-bottom: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#cy-left-column {
+  margin: 2.5rem 0;
+  color: #5a5e69;
+  line-height: 1.5;
+  list-style-type: none;
+}
+
+#cy-left-column li {
+  padding: 1.25rem 0;
+  border-top: 1px solid #d1d3dd;
+}
+
+.signup-bullets {
+  margin: 1.875rem 0 1.875rem 1.5625rem;
+  color: #5a5e69;
+  line-height: 1.5;
+  list-style-type: disc;
+  padding: 0;
+}
+
+.signup-bullets li {
+  margin-bottom: 1.25rem;
+}
+
+.start-application-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  width: 47.625rem;
+  margin: 0;
+  padding: 0 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+.application-section-header {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  z-index: auto;
+  height: 2.8125rem;
+  margin: 0 0rem 0.5rem;
+  padding: 0 1.25rem;
+  border-bottom: 1px solid #d1d3dd;
+  box-shadow: none;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.application-section-header .application-section-header-title {
+  font-size: .9375rem;
+  text-align: left;
+  width: 100%;
+}
+
+.signup-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.application-section-header-title .gray-400 {
+  color: #8d919a!important;
+  text-shadow: none!important;
+}
+
+.application-section-header-title .gray-600 {
+  color: #5a5e69!important;
+  text-shadow: none!important;
+}
+
+.right-column-container {
+  background-color: #f1f2f7;
+  border: 1px solid #d1d3dd;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.group-85 {
+  height: 85px;
+}
+
+.group-width-100-percent,
+.group-width-100-percent:hover,
+.start-application .btn-secondary:hover {
+  width: 100%;
+  background: white;
+  border-color: #ccc;
+  border-radius: 0;
+  color: black;
+} // .start-application .btn-secondary:hover, .start-application .btn-secondary{
+//   width: 132px;
+// }
+.signup-container fieldset > h1{
+  padding: 10px;
+}
+.group-size-12 {
+  font-size: 12px;
+}
+
+.group-size-16 {
+  font-size: 16px;
+}
+
+.start-application .btn {
+  border-radius: 0;
+}
+
+.start-application fieldset {
+  margin-bottom: 30px;
+}
+
+.p,
+.pre {
+  line-height: 1.5;
+}
+
+.p {
+  margin: 0 0 .05859rem;
+  color: #30343c;
+}
+
+.h6,
+.p {
+  font-family: lato-reg-webfont, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.t-small {
+  font-size: 80%;
+}
+
+.l-m-bottom-10 {
+  margin-bottom: .625rem!important;
+}
+
+.bottom-cotent {
+  margin: 30px 0;
+  position: relative;
+  height: 38px;
+}
+
+.bottom-cotent button,
+.bottom-cotent .btn {
+  position: absolute;
+  right: 10px;
+  border-radius: 100px;
+}
+
+.select-group {
+  padding: 0;
+}
